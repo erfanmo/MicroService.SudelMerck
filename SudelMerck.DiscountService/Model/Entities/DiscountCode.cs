@@ -1,6 +1,6 @@
 ﻿namespace SudelMerck.DiscountService.Model.Entities
 {
-    public class Discount
+    public class DiscountCode
     {
         public Guid Id { get; set; }
         public int Amount { get; set; }

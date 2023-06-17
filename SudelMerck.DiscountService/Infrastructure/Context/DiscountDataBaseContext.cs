@@ -9,6 +9,6 @@ namespace SudelMerck.DiscountService.Infrastructure.Context
         {
 
         }
-        public DbSet<Discount> Discount { get; set; }
+        public DbSet<DiscountCode> Discount { get; set; }
     }
 }
