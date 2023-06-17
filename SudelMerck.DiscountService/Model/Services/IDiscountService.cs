@@ -11,11 +11,11 @@ namespace SudelMerck.DiscountService.Model.Services
         bool AddNewDiscount(string Code,int Amount);
     }
 
-    public class DiscountService : IDiscountService
+    public class DiscountCodeService : IDiscountService
     {
         private readonly DiscountDataBaseContext _context;
         private readonly IMapper  _mapper;
-        public DiscountService(DiscountDataBaseContext context,IMapper mapper)
+        public DiscountCodeService(DiscountDataBaseContext context,IMapper mapper)
         {
             this._context = context;
             this._mapper = mapper;

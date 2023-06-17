@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SudelMerck.DiscountService.Infrastructure.Context;
 using SudelMerck.DiscountService.Infrastructure.MappingProfile;
+using SudelMerck.DiscountService.Model.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DiscountDataBaseContext>(p => p.UseSqlServer(configuration["DiscountConnection"]));
 builder.Services.AddAutoMapper(typeof(DiscountMappingProfile));
+builder.Services.AddTransient<IDiscountService, DiscountCodeService>();
 
 var app = builder.Build();
 

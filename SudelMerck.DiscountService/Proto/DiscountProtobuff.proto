@@ -27,7 +27,7 @@ message RequestUseDiscount
 
 message ResultUseDiscount
 {
-	string isSuccess=1;
+	bool isSuccess=1;
 }
 
 message RequestgetDiscountByCode
